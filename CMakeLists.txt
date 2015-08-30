@@ -31,6 +31,11 @@ OPTION (BUILD_SHARED_LIBS "Build Shared Libraries" ON)
 # Allow the developer to select if Dynamic or Static libraries are built
 OPTION (NAMESPACE_VERSIONING "Namespace Versioning" ON)
 
+# set /W1 and disable somewarning
+set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${DISABLE_WARNING}")
+message("========================= in IlmBase-2.2.0/CMakeLists.txt =========================")
+message("CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
+
 # Setup osx rpathing
 SET (CMAKE_MACOSX_RPATH 1)
 SET (BUILD_WITH_INSTALL_RPATH 1)
